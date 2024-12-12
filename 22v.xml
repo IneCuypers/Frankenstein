@@ -34,7 +34,7 @@
         <pb facs="#p22v"/>
         <metamark function="pagenumber"><num><hi rend="circled">78</hi></num></metamark>
       <p>
-        so hideous as <hi rend="underline">He</hi>... I had gazed on him<lb/>
+        so hideous as <hi rend="doubleunderline">He</hi>... I had gazed on him<lb/>
         while unfinished; <del type="crossedOut" hand="#MWS" rend="blackink">and I thought</del> he<lb/>
         was ugly then. But when those muscles<lb/>
         and joints were endued with motion<lb/>
@@ -43,7 +43,7 @@
       </p>
       <p style="text-indent:20px">I passed the night wretchedly–<lb/>
         sometimes my pulses beat so quickly <del type="overwritten" hand="#MWS" rend="blackink">t</del><add place="inttrralinear" hand="#MWS" rend="blackink">and</add><lb/>
-        ha<metamark>^</metamark><add place="supralinear" hand="#MWS">r</add>dly that I felt the palpitation of<lb/>
+        ha<add place="sublinear"><metamark function="insert">^</metamark></add><add place="supralinear" hand="#MWS">r</add>dly that I felt the palpitation of<lb/>
         every artery: at others I nearly sunk<lb/>
         to the ground <del type="crossedOut" hand="#PBS" rend="blackink">with</del><add place="supralinear">thro</add> languor and ex-<lb/>
         treme weakness.<del type="crossedOut" hand="#MWS" rend="blackink">Surely so wretched a</del><lb/>

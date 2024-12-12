@@ -39,9 +39,7 @@
          the corpse of my dead mother in my arms<del type="overwritten" hand="#PBS" rend="blackink">,</del><add place="infraliear" hand="#PBS" rend="blackink">:</add><lb/>
         <del type="overwritten" hand="#MWS" rend="blackink">a</del><add place="intralinear" hand="#MWS" rend="blackink">A</add>shroud envolepped her form &amp; I saw<lb/>
         the grave worms crawling in the folds of<lb/>
-        the flannel; I started<add place="intralinear" hand="#MWS" rend="blackink"><metamark>^</metamark></add>
-          <note>'^' is used as metamark, close visual resemblance</note><add place="supralinear" hand="#MWS" rend="blackink">from my sleep</add>with horror, a<lb/>
-        <del type="crossedOut" hand="#MWS" rend="blackink">when I saw</del>cold dew covered my forehead<lb/>
+        the flannel; I started<add place="sublinear"><metamark function="insert">^</metamark></add><add place="supralinear" hand="#MWS" rend="blackink">from my sleep</add>with horror, a<lb/><del type="crossedOut" hand="#MWS" rend="blackink">when I saw</del>cold dew covered my forehead<lb/>
         my teeth <del type="crossedOut" hand="#MWS" rend="blackink">ah</del>chattered and every limb<lb/>
         <del type="crossedOut" hand="#PBS" rend="blackink">was</del><add place="supralinear" hand="#PBS" rend="blackink">became</add>convul<del type="overwritten" hand="#MWS" rend="blackink"><!-- unclear char --></del><add place="intralinear" hand="#MWS" rend="blackink">s</add>ed, when, by the dim and<lb/>
         yellow light of the moon as it forced<lb/>
@@ -70,9 +68,9 @@
       </p>
       <p style="text-indent:20px">Oh! no mortal could support <lb/>
         the horror of that countenance.a<lb/>
-        mummy<metamark>^</metamark><add place="supralinear" hand="#MWS" rend="blackink">again</add>endued with <del type="crossedOut" hand="#PBS" rend="blackink">life</del>
-          <add place="supralinear" hand="#PBS" rend="blackink">animation</add>could not be<lb/>
-      </p></div>
+        mummy<add place="sublinear"><metamark function="insert">^</metamark></add><add place="supralinear" hand="#MWS" rend="blackink">again</add>endued with <del type="crossedOut" hand="#PBS" rend="blackink">life</del><add place="supralinear" hand="#PBS" rend="blackink">animation</add>could not be<lb/>
+      </p>
+      </div>
     </body>
   </text>
 </TEI>
