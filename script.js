@@ -104,15 +104,56 @@ function documentLoader() {
   var MaryArray = Array.from(visible_mary);
   var PercyArray = Array.from(visible_percy);
     if (event.target.value == 'both') {
-    //write an forEach() method that shows all the text written and modified by both hand (in black?). The forEach() method of Array instances executes a provided function once for each array element.
-     
-    } else if (event.target.value == 'Mary') {
+    //write an forEach() method that shows all the text written and modified by both hand (in black?). The forEach() method of Array instances executes a provided function once for each array element
+    MaryArray.concat(PercyArray).forEach(item => {
+      item.style.color = 'black';
+    });
+    } 
+    else if (event.target.value == 'Mary') {
      //write an forEach() method that shows all the text written and modified by Mary in a different color (or highlight it) and the text by Percy in black. 
-     
-    } else {
+     MaryArray.forEach(item => {
+      item.style.color = 'red';
+    });
+
+    PercyArray.forEach(item => {
+      item.style.color = 'black';
+    });
+    } 
+    else {
      //write an forEach() method that shows all the text written and modified by Percy in a different color (or highlight it) and the text by Mary in black.
-    
+     MaryArray.forEach(item => {
+      item.style.color = 'black';
+    });
+
+    PercyArray.forEach(item => {
+      item.style.color = 'red';
+    });
     }
   }
+  
+document.getElementById('handSelector').addEventListener('change', selectHand);
+  
+
 // write another function that will toggle the display of the deletions by clicking on a button
+
+function toggleDeletedText() {
+  var deletedText = document.querySelectorAll('del'); // Select all <del> elements
+
+  deletedText.forEach(function(item) {
+    // Check if the display property is currently 'inline' (visible)
+    if (item.style.display === 'inline') {
+      item.style.display = 'none';  // Hide the deleted text
+    } else {
+      item.style.display = 'inline'; // Show the deleted text
+    }
+  });
+}
+
+// Add event listener to the button
+document.getElementById('toggleButton').addEventListener('click', toggleDeletedText);
+
+
+  
+
+
 // EXTRA: write a function that will display the text as a reading text by clicking on a button or another dropdown list, meaning that all the deletions are removed and that the additions are shown inline (not in superscript)

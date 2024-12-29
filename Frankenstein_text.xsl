@@ -5,7 +5,7 @@
     exclude-result-prefixes="xs tei"
     version="2.0">
     
-    <!-- <xsl:output method="xml" omit-xml-declaration="yes" indent="yes" /> -->
+    <xsl:output method="xml" omit-xml-declaration="yes" indent="yes" />
     <xsl:template match="tei:teiHeader"/>
 
     <xsl:template match="tei:body">
@@ -62,6 +62,8 @@
             <xsl:apply-templates/>
         </del>
     </xsl:template>
+
+  
     
     <!-- all the supralinear additions are given in a span with the class supraAdd, make sure to put this class in superscript in the CSS file, -->
     <xsl:template match="tei:add[@place = 'supralinear']">
@@ -72,6 +74,38 @@
     
     
     <!-- add additional templates below, for example to transform the tei:lb in <br/> empty elements, tei:hi[@rend = 'sup'] in <sup> elements, the underlined text, additions with the attribute "overwritten" etc. -->
+    <xsl:template match="tei:lb">
+        <br/>
+        <xsl:apply-templates/>
+    </xsl:template>
+
+    <xsl:template match="tei:hi[@rend = 'sup']">
+        <span class="supraAdd">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
+     <xsl:template match="tei:hi[@rend ='underlined']">
+        <span class="underlined">
+            <xsl:apply-templates/></u>
+        </span>
+    </xsl:template>
+
+    <xsl:template match="tei:del[@place= 'overwritten']">
+        <span class="crossedOut">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
+<xsl:template match="tei:hi[@rend= 'circled']">
+    <span class="underlined">
+        <xsl:apply-templates/>
+    </span> 
+    </xsl:template>
+
+<xsl:template match="*">
+    <xsl:apply-templates/>
+</xsl:template>
 
     
 </xsl:stylesheet>

@@ -1,3 +1,6 @@
+
+
+
 body {
 
 }
@@ -32,4 +35,13 @@ p {
     display: none !important;
 }
 
-
+.supraAdd {
+    vertical-align: super;
+}
+ 
+  .underlined {
+    text-decoration: underline;
+  }
+  .crossedOut {
+    text-decoration: line-through;
+  }

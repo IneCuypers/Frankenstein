@@ -22,8 +22,18 @@
                                 </li>
                                 <li>Number of additions: 
                                     <!-- count the additions only -->
+                                    <xsl:value-of select="count(//tei:add)" /> 
+                                </li>
+                                <li>Number of modifications by Percy Shelly:
+                                    <xsl:value-of select="count(//tei:del[@hand = '#PBS']|//tei:add[@hand = '#PBS'])" />
+                                </li>
+                                <li>Number of modifications by Mary Shelly:
+                                    <xsl:value-of select="count(//tei:del[@hand = '#MWS']|//tei:add[@hand = '#MWS'])" />
                                 </li>
                                 <!-- add other list items in which you count things, such as the modifications made by Percy -->
+                                <li>Total number of words on manuscript page:
+                                    <xsl:value-of select="count(//text())"/>
+                                </li>
                             </ul>
                         </div>
                      </div>
