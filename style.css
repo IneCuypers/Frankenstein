@@ -1,8 +1,8 @@
 
 
 
-body {
-
+body {  
+  
 }
 .starter-template {
   padding: 40px 15px;
@@ -28,7 +28,7 @@ p {
 }
 
 .marginAdd {
-    display: none;
+    display: left;
 }
 
 .mirador-canvas-nav {
@@ -43,5 +43,9 @@ p {
     text-decoration: underline;
   }
   .crossedOut {
+    text-decoration: line-through;
+  }
+
+  del {
     text-decoration: line-through;
   }

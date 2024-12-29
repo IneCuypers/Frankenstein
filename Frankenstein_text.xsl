@@ -87,7 +87,7 @@
 
      <xsl:template match="tei:hi[@rend ='underlined']">
         <span class="underlined">
-            <xsl:apply-templates/></u>
+            <xsl:apply-templates/>
         </span>
     </xsl:template>
 
@@ -102,10 +102,6 @@
         <xsl:apply-templates/>
     </span> 
     </xsl:template>
-
-<xsl:template match="*">
-    <xsl:apply-templates/>
-</xsl:template>
 
     
 </xsl:stylesheet>

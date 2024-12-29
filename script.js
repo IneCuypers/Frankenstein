@@ -96,6 +96,7 @@ function documentLoader() {
   // Initial document load
   documentLoader();
   statsLoader();
+
   // Event listener for sel1 change
   function selectHand(event) {
   var visible_mary = document.getElementsByClassName('#MWS');
@@ -106,7 +107,7 @@ function documentLoader() {
     if (event.target.value == 'both') {
     //write an forEach() method that shows all the text written and modified by both hand (in black?). The forEach() method of Array instances executes a provided function once for each array element
     MaryArray.concat(PercyArray).forEach(item => {
-      item.style.color = 'black';
+      item.style.color = 'red';
     });
     } 
     else if (event.target.value == 'Mary') {
@@ -131,7 +132,7 @@ function documentLoader() {
     }
   }
   
-document.getElementById('handSelector').addEventListener('change', selectHand);
+document.getElementById('sel-hand').addEventListener('change', selectHand);
   
 
 // write another function that will toggle the display of the deletions by clicking on a button
