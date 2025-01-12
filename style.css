@@ -1,9 +1,5 @@
 
 
-
-body {  
-  
-}
 .starter-template {
   padding: 40px 15px;
   text-align: center;
@@ -28,24 +24,43 @@ p {
 }
 
 .marginAdd {
-    display: left;
+  display: none;
+  color: purple
 }
 
 .mirador-canvas-nav {
-    display: none !important;
+  display: none !important;
 }
 
 .supraAdd {
-    vertical-align: super;
+  vertical-align: super;
 }
  
-  .underlined {
-    text-decoration: underline;
-  }
-  .crossedOut {
-    text-decoration: line-through;
-  }
+.underlined {
+  text-decoration: underline;
+}
 
-  del {
-    text-decoration: line-through;
-  }
+.crossedOut {
+  text-decoration: line-through;
+}
+
+.circled {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: solid;
+  border-color: black;
+}
+
+del {
+  text-decoration: line-through;
+  display: inline; 
+}
+
+.metamarkInsert {
+  vertical-align: bottom;
+}
+
+.listItem {
+  text-indent: 40px;
+}

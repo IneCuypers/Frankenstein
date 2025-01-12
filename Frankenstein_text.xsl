@@ -44,7 +44,7 @@
     </xsl:template>
     
     <xsl:template match="tei:p">
-        <p><xsl:apply-templates/></p>
+        <p style="text-indent:20px"><xsl:apply-templates/></p>
     </xsl:template>
 
   
@@ -63,6 +63,7 @@
         </del>
     </xsl:template>
 
+ 
   
     
     <!-- all the supralinear additions are given in a span with the class supraAdd, make sure to put this class in superscript in the CSS file, -->
@@ -74,15 +75,24 @@
     
     
     <!-- add additional templates below, for example to transform the tei:lb in <br/> empty elements, tei:hi[@rend = 'sup'] in <sup> elements, the underlined text, additions with the attribute "overwritten" etc. -->
+    <xsl:template match="tei:add">
+        <add>
+            <xsl:attribute name="class">
+                <xsl:value-of select="@hand"/>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </add>
+    </xsl:template>
+    
     <xsl:template match="tei:lb">
-        <br/>
+        <br />
         <xsl:apply-templates/>
     </xsl:template>
 
     <xsl:template match="tei:hi[@rend = 'sup']">
-        <span class="supraAdd">
+        <sup>
             <xsl:apply-templates/>
-        </span>
+        </sup>
     </xsl:template>
 
      <xsl:template match="tei:hi[@rend ='underlined']">
@@ -91,17 +101,34 @@
         </span>
     </xsl:template>
 
-    <xsl:template match="tei:del[@place= 'overwritten']">
+ <xsl:template match="tei:del[@type= 'crossedOut']">
         <span class="crossedOut">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
 
-<xsl:template match="tei:hi[@rend= 'circled']">
-    <span class="underlined">
-        <xsl:apply-templates/>
-    </span> 
+    <xsl:template match="tei:del[@type= 'overwritten']">
+        <span class="crossedOut">
+            <xsl:apply-templates/>
+        </span>
     </xsl:template>
 
+    <xsl:template match="tei:hi[@rend= 'circled']">
+        <span class="circled">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
+    <xsl:template match="tei:metamark[@function= 'insert']">
+        <span class="metamarkInset">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
+<xsl:template match="tei:item">
+        <span class="listItem">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
     
 </xsl:stylesheet>

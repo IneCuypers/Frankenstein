@@ -99,61 +99,95 @@ function documentLoader() {
 
   // Event listener for sel1 change
   function selectHand(event) {
-  var visible_mary = document.getElementsByClassName('#MWS');
-  var visible_percy = document.getElementsByClassName('#PBS');
-  // Convert the HTMLCollection to an array for forEach compatibility
-  var MaryArray = Array.from(visible_mary);
-  var PercyArray = Array.from(visible_percy);
-    if (event.target.value == 'both') {
+    var visible_mary = document.getElementsByClassName('#MWS');
+    var visible_percy = document.getElementsByClassName('#PBS');
+    // Convert the HTMLCollection to an array for forEach compatibility
+    var MaryArray = Array.from(visible_mary);
+    var PercyArray = Array.from(visible_percy);
+      if (event.target.value === 'both') {
     //write an forEach() method that shows all the text written and modified by both hand (in black?). The forEach() method of Array instances executes a provided function once for each array element
-    MaryArray.concat(PercyArray).forEach(item => {
-      item.style.color = 'red';
-    });
-    } 
-    else if (event.target.value == 'Mary') {
-     //write an forEach() method that shows all the text written and modified by Mary in a different color (or highlight it) and the text by Percy in black. 
-     MaryArray.forEach(item => {
-      item.style.color = 'red';
-    });
-
-    PercyArray.forEach(item => {
-      item.style.color = 'black';
-    });
-    } 
-    else {
-     //write an forEach() method that shows all the text written and modified by Percy in a different color (or highlight it) and the text by Mary in black.
-     MaryArray.forEach(item => {
-      item.style.color = 'black';
-    });
-
-    PercyArray.forEach(item => {
-      item.style.color = 'red';
-    });
+        MaryArray.forEach(function(element){
+            element.style.color = 'black';
+        });
+        PercyArrayArray.forEach(function(element){
+          element.style.color = 'black';
+        });
+      } 
+      else if (event.target.value === 'Mary') {
+          //write an forEach() method that shows all the text written and modified by Mary in a different color (or highlight it) and the text by Percy in black. 
+        MaryArray.forEach(function(element){
+          element.style.color = 'red';
+        });
+        PercyArray.forEach(function(element){
+          element.style.color = 'black';
+        });
+      } 
+      else {
+        //write an forEach() method that shows all the text written and modified by Percy in a different color (or highlight it) and the text by Mary in black.
+        MaryArray.forEach(function(element){
+          element.style.color = 'black';
+        });
+        PercyArray.forEach(function(element){
+          element.style.color = 'red';
+        });
+      }
     }
-  }
-  
-document.getElementById('sel-hand').addEventListener('change', selectHand);
-  
+
+selectHand();
 
 // write another function that will toggle the display of the deletions by clicking on a button
 
-function toggleDeletedText() {
-  var deletedText = document.querySelectorAll('del'); // Select all <del> elements
-
-  deletedText.forEach(function(item) {
-    // Check if the display property is currently 'inline' (visible)
-    if (item.style.display === 'inline') {
-      item.style.display = 'none';  // Hide the deleted text
-    } else {
-      item.style.display = 'inline'; // Show the deleted text
-    }
-  });
+function toggleDeletions() {
+  var deletions = document.getElementsByTagName('del');
+  var deletionsArray = Array.from(deletions); // Convert HTMLCollection to an array
+  if (deletionsArray.length > 0 && deletionsArray[0].style.display === "inline") {
+    deletionsArray.forEach(function(del) {
+      del.style.display = "none";
+    });
+  } 
+  else {
+    deletionsArray.forEach(function(del) {
+      del.style.display = "inline";
+    });
+  }
 }
 
-// Add event listener to the button
-document.getElementById('toggleButton').addEventListener('click', toggleDeletedText);
+toggleDeletions();
 
+/*
+function toggleDeletions() {
+  var deletions = document.getElementsByTagName('del');
+  var deletionsArray = Array.from(deletions)
+  if (deletions.style.display === "inline") {
+    deletionsArray.forEach(function(del) {
+      del.style.display = "none"
+    })
+  }
+  else {
+    deletionsArray.forEach(function(del) {
+      del.style.display = "inline"
+    })
+  }
+}
+  
 
+/*
+  let deletions = document.getElementsByTagName('del');
+  let deletionsArray = Array.from(deletions); 
+  let selectedValue = event.target.value; 
+
+  if (selectedValue === 'show') {
+    deletionsArray.forEach(function(element){
+      element.style.display = 'inline';
+    });
+  }
+  else if (selectedValue === 'hide') {
+    deletionsArray.forEach(function(element){
+      element.style.display = 'none';
+    });
+  }
+}
+*/
   
 
 

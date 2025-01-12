@@ -34,7 +34,6 @@
          <div type="page" n="24r" rend="recto">
             <pb facs="#p24r"/>
                <metamark function="pagenumber"><num><hi rend="circled">81</hi></num></metamark>
-               <metamark function="pagenumber"><num><hi rend="pencil">24</hi></num></metamark>
             <p>
                "and Indeed I believe I left him<lb/>
                "incredulous to the last for his con<lb/>
@@ -71,7 +70,7 @@
             <p style="text-indent:20px">"You have guessed right" I replied<lb/>
                "I have lately been so engaged in<lb/>
                <del type="crossedOut" hand="#MWS" rend="blackink">"several</del><add place="supralinear" hand="#PBS" rend="blackink"><del type="crossedOut" hand="#PBS" rend="blackink">studious</del> one</add> occupation<del type="crossedOut" hand="#PBS" rend="blackink">s</del> that I <del type="crossedOut" hand="#MWS" rend="blackink">did</del><lb/>
-               <add place="marginleft" hand="#PBS" rend="blackink">have</add>"not allow<add place="overwritten" hand="#PBS" rend="blackink">ed</add><add place="sublinear"><metamark function= "insert">^</metamark><add place="supralinear" hand="#MWS" rend="blackink">myself</add> sufficient rest as you<lb/>
+               <add place="marginleft" hand="#PBS" rend="blackink">have</add>"not allow<add place="overwritten" hand="#PBS" rend="blackink">ed</add><add place="sublinear"><metamark function= "insert">^</metamark></add><add place="supralinear" hand="#MWS" rend="blackink">myself</add> sufficient rest as you<lb/>
             </p>
          </div>
       </body>
